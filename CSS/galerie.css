@@ -1,0 +1,167 @@
+:root {
+  --creme: #FAF5EE;
+  --cafe: #3E2723;
+  --terracotta: #C8643B;
+  --sable: #E8DFD3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  font-family: Poppins, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 56px;
+}
+
+.conteneur {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.entete {
+  position: sticky;
+  top: 0;
+  background: var(--cafe);
+}
+
+.entete-contenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu a {
+  color: white;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+}
+
+.menu a:hover {
+  color: var(--sable);
+}
+
+.menu a.actif {
+  border-bottom-color: var(--terracotta);
+}
+
+.titre-page {
+  padding: 64px 0;
+  background: var(--sable);
+  text-align: center;
+}
+
+.galerie {
+  padding: 96px 0;
+}
+
+.galerie-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.galerie figure {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  margin: 0;
+  border-radius: 12px;
+}
+
+.galerie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.galerie figure:hover img {
+  transform: scale(1.05);
+}
+
+.galerie figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: rgba(62, 39, 35, 0.75);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.galerie figure:hover figcaption {
+  opacity: 1;
+}
+
+.pied {
+  padding: 40px 0 16px;
+  background: var(--cafe);
+  color: var(--creme);
+  font-size: 14px;
+}
+
+.pied-colonnes {
+  display: flex;
+  gap: 32px;
+}
+
+.pied-colonnes > div {
+  flex: 1;
+}
+
+.pied img {
+  height: 48px;
+}
+
+.copyright {
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .galerie-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .entete-contenu,
+  .pied-colonnes {
+    flex-direction: column;
+    height: auto;
+  }
+}

@@ -1,0 +1,419 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --creme: #FAF5EE;
+  --cafe: #3E2723;
+  --terracotta: #C8643B;
+  --terracotta-fonce: #A94E2B;
+  --sauge: #7A8F6B;
+  --sable: #E8DFD3;
+  --texte: #2B2B2B;
+  --blanc: #FFFFFF;
+  --e8: 8px;
+  --e16: 16px;
+  --e24: 24px;
+  --e32: 32px;
+  --e40: 40px;
+  --e64: 64px;
+  --e96: 96px;
+  --ombre: 0 4px 16px rgba(62, 39, 35, 0.12);
+  --ombre-forte: 0 12px 32px rgba(62, 39, 35, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--texte);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 var(--e16);
+}
+
+.conteneur {
+  width: calc(100% - 64px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--e32);
+  border: 2px solid var(--terracotta);
+  border-radius: 8px;
+  background: var(--terracotta);
+  color: var(--blanc);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.bouton:hover {
+  background: var(--terracotta-fonce);
+  border-color: var(--terracotta-fonce);
+  transform: translateY(-2px);
+}
+
+.bouton-secondaire {
+  background: transparent;
+  color: var(--terracotta);
+}
+
+.bouton-secondaire:hover {
+  color: var(--blanc);
+}
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 80px;
+  background: var(--cafe);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.entete-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo img {
+  height: 48px;
+  border-radius: 0;
+}
+
+.menu {
+  display: flex;
+  gap: var(--e32);
+}
+
+.menu a {
+  display: block;
+  padding: var(--e8) 0;
+  border-bottom: 3px solid transparent;
+  color: var(--blanc);
+  font-weight: 500;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--sable);
+}
+
+.menu a.actif {
+  border-bottom-color: var(--terracotta);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 600px;
+  background: linear-gradient(rgba(62, 39, 35, 0.45), rgba(62, 39, 35, 0.45)), url("../img/hero-accueil.jpg") center / cover no-repeat;
+  color: var(--blanc);
+}
+
+.hero h1 {
+  margin-bottom: var(--e16);
+}
+
+.hero p {
+  max-width: 560px;
+  margin-bottom: var(--e32);
+  font-size: 20px;
+}
+
+.histoire {
+  padding: var(--e64) 0;
+}
+
+.histoire-grille {
+  display: grid;
+  grid-template-columns: 560px 560px;
+  gap: 80px;
+  align-items: center;
+}
+
+.histoire-texte h2 {
+  margin-bottom: var(--e24);
+}
+
+.histoire-texte .bouton {
+  margin-top: var(--e8);
+}
+
+.histoire-grille img {
+  width: 560px;
+  height: 360px;
+}
+
+.coeurs {
+  padding: 0 0 var(--e96);
+}
+
+.coeurs h2 {
+  margin-bottom: var(--e40);
+  text-align: center;
+}
+
+.coeurs-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.carte-produit {
+  overflow: hidden;
+  background: var(--blanc);
+  border-radius: 12px;
+  box-shadow: var(--ombre);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.carte-produit:hover {
+  box-shadow: var(--ombre-forte);
+  transform: translateY(-4px);
+}
+
+.carte-produit img {
+  width: 100%;
+  height: 260px;
+  border-radius: 0;
+}
+
+.carte-texte {
+  padding: var(--e16) var(--e24) var(--e24);
+}
+
+.carte-texte h3 {
+  margin-bottom: var(--e8);
+}
+
+.carte-texte p {
+  margin-bottom: var(--e8);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.prix {
+  color: var(--terracotta);
+  font-weight: 500;
+}
+
+.bandeau-horaires {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  background: var(--sable);
+  text-align: center;
+}
+
+.bandeau-horaires p {
+  margin: var(--e8) 0 0;
+}
+
+.pied {
+  min-height: 240px;
+  padding: var(--e40) 0 var(--e16);
+  background: var(--cafe);
+  color: var(--creme);
+}
+
+.pied-colonnes {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--e32);
+}
+
+.pied-colonnes > div {
+  flex: 1;
+}
+
+.pied img {
+  height: 48px;
+  margin-bottom: var(--e16);
+  border-radius: 0;
+}
+
+.pied h3 {
+  margin-bottom: var(--e16);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.pied p,
+.pied li {
+  margin: 0 0 var(--e8);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pied a {
+  transition: color 0.3s;
+}
+
+.pied a:hover {
+  color: var(--terracotta);
+}
+
+.pied .copyright {
+  margin: var(--e24) 0 0;
+  padding-top: var(--e16);
+  border-top: 1px solid rgba(250, 245, 238, 0.2);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .histoire-grille {
+    grid-template-columns: 1fr;
+    gap: var(--e32);
+  }
+
+  .histoire-grille img {
+    order: -1;
+    width: 100%;
+  }
+
+  .coeurs-grille {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--e32);
+  }
+
+  .pied-colonnes {
+    flex-wrap: wrap;
+  }
+
+  .pied-colonnes > div {
+    flex: 1 1 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteneur {
+    width: calc(100% - 48px);
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .entete {
+    height: auto;
+    padding: var(--e8) 0;
+  }
+
+  .entete-contenu {
+    flex-direction: column;
+    gap: var(--e8);
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 var(--e32);
+    text-align: center;
+  }
+
+  .hero {
+    height: 420px;
+  }
+
+  .hero .bouton {
+    width: 100%;
+  }
+
+  .histoire-grille img {
+    height: 220px;
+  }
+
+  .coeurs {
+    padding-bottom: var(--e64);
+  }
+
+  .coeurs-grille {
+    grid-template-columns: 1fr;
+    gap: var(--e24);
+  }
+
+  .carte-produit img {
+    height: 200px;
+  }
+
+  .bandeau-horaires {
+    padding: var(--e24) 0;
+  }
+
+  .pied-colonnes {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pied-colonnes > div {
+    align-items: center;
+    text-align: center;
+  }
+}

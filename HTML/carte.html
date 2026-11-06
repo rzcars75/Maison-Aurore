@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte - Maison Aurore</title>
+    <link rel="stylesheet" href="../CSS/carte.css">
+    <link rel="icon" type="image/png" href="/ASSETS/logoredimensionner.svg">
+</head>
+
+<body>
+    <header class="entete"> 
+        <div class="conteneur entete-contenu">
+            <a href="/HTML/index.html" class="logo"><img src="/ASSETS/logo.png" alt="Maison Aurore"></a>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="/HTML/index.html">Accueil</a></li>
+                        <li><a href="/HTML/carte.html" class="actif">La Carte</a></li>
+                        <li><a href="/HTML/galerie.html">Galerie</a></li>
+                        <li><a href="/HTML/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="conteneur">
+                <h2>Notre Carte</h2>
+            </div>
+        </section>
+
+        <section class="carte-menu">
+            <div class="conteneur">
+                <input type="radio" name="onglet" id="onglet-entrees" class="onglet-radio" checked>
+                <input type="radio" name="onglet" id="onglet-plats" class="onglet-radio">
+                <input type="radio" name="onglet" id="onglet-desserts" class="onglet-radio">
+                <input type="radio" name="onglet" id="onglet-boissons" class="onglet-radio">
+            <div class="onglets">
+                <label for="onglet-entrees">Entrées</label>
+                <label for="onglet-plats">Plats</label>
+                <label for="onglet-desserts">Desserts</label>
+                <label for="onglet-boissons">Boissons</label>
+            </div>
+
+            <div class="panneaux">
+                <div class="panneau panneau-entrees">
+                    <article class="plat">
+                        <img src="uneimage" alt="Croque Aurore">
+                        <div>
+                            <h3>Croque Aurore</h3>
+                            <p>Pain de campagne, jambon, comté, béchamel maison </p>
+                            <span class="prix">9,50 EUR</span>
+                        </div>
+                    </article>
+
+                    <article class="plat">
+                        <img src="uneimage" alt="quiche du jour">
+                        <div>
+                            <h3>Quiche du jour</h3>
+                            <p>Pâte brisée, légumes de saison, salade verte </p>
+                            <span class="prix">8,50 EUR</span>
+                        </div>
+                    </article>
+
+                    <article class="plat">
+                        <img src="uneimage" alt="Bowl végétal ">
+                        <div>
+                            <h3>Bowl végétal </h3>
+                            <p>Quinoa, avocat, pois chiches, graines, vinaigrette citron </p>
+                            <span class="prix">11,00 EUR</span>
+                        </div>
+                    </article>
+
+                    <article class="plat">
+                        <img src="uneimage" alt="Tartine au Saumon">
+                        <div>
+                            <h3>Tartine au Saumon</h3>
+                            <p>Pain au levain, saumon fumé, fromage frais, aneth</p>
+                            <span class="prix">10,50 EUR</span>
+                        </div>
+                    </article>
+
+                    <article class="plat">
+                        <img src="uneimage" alt="Soupe Velours">
+                        <div>
+                            <h3>Soupe Velours</h3>
+                            <p>Soupe de potiron, crème, croûtons </p>
+                            <span class="prix">7,00 EUR</span>
+                        </div>
+                    </article>
+
+                    <article class="plat">
+                        <img src="uneimage" alt="Planche Gourmande">
+                        <div>
+                            <h3>Planche Gourmande</h3>
+                            <p>mages, charcuterie, confiture de figues </p>
+                            <span class="prix">14,00 EUR</span>
+                        </div>
+                    </article>
+                </div>  
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

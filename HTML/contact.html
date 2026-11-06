@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contactez Maison Aurore : formulaire, adresse et horaires.">
+  <title>Contact - Maison Aurore</title>
+  <link rel="stylesheet" href="/CSS/contact.css">
+  <link rel="icon" type="image/png" href="/ASSETS/logo.png">
+</head>
+<body>
+  <header class="entete">
+    <div class="conteneur entete-contenu">
+      <a href="index.html" class="logo"><img src="img/logo.svg" alt="Maison Aurore"></a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="carte.html">La Carte</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html" class="actif">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="titre-page">
+      <div class="conteneur">
+        <h1>Contact</h1>
+        <p>Une question, une réservation ? Écrivez-nous, nous répondons rapidement.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="conteneur contact-grille">
+        <form action="#" method="post" class="formulaire">
+          <div class="champ">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="champ">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="champ">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="bouton">Envoyer</button>
+        </form>
+
+        <aside class="coordonnees">
+          <h2>Coordonnées</h2>
+          <address>
+            <p>12 rue des Lilas, 75011 Paris</p>
+            <p>01 23 45 67 89</p>
+            <p>contact@maison-aurore.fr</p>
+          </address>
+          <h3>Horaires d'ouverture</h3>
+          <p>Mardi au dimanche : 8h - 19h</p>
+          <p>Fermé le lundi</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="plan">
+      <div class="conteneur">
+        <img src="img/plan.jpg" alt="Plan d'accès à Maison Aurore">
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="pied-colonnes">
+        <div>
+          <img src="img/logo.svg" alt="Maison Aurore">
+          <p>Café et salon de thé artisanal, fait maison chaque matin.</p>
+        </div>
+        <div>
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="carte.html">La Carte</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>12 rue des Lilas, 75011 Paris</p>
+          <p>01 23 45 67 89</p>
+          <p>Mardi au dimanche, 8h - 19h</p>
+        </div>
+        <div>
+          <h3>Réseaux</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Maison Aurore. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>

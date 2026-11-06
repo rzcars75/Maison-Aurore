@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --creme: #FAF5EE;
+  --cafe: #3E2723;
+  --terracotta: #C8643B;
+  --sauge: #7A8F6B;
+  --sable: #E8DFD3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: #2B2B2B;
+  font-family: Poppins, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0 0 16px;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+h1 { font-size: 56px; }
+h2 { font-size: 40px; }
+h3 { font-size: 24px; }
+
+.conteneur {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 2px solid var(--terracotta);
+  border-radius: 8px;
+  background: var(--terracotta);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bouton:hover {
+  background: #A94E2B;
+  transform: translateY(-2px);
+}
+
+.bouton-secondaire {
+  background: transparent;
+  color: var(--terracotta);
+}
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--cafe);
+}
+
+.entete-contenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo img {
+  height: 48px;
+  border-radius: 0;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu a {
+  color: white;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+}
+
+.menu a:hover {
+  color: var(--sable);
+}
+
+.menu a.actif {
+  border-bottom-color: var(--terracotta);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 600px;
+  background: linear-gradient(rgba(62, 39, 35, 0.45), rgba(62, 39, 35, 0.45)), url("../img/hero-accueil.jpg") center / cover;
+  color: white;
+}
+
+.histoire {
+  padding: 64px 0;
+}
+
+.histoire-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.coeurs {
+  padding-bottom: 96px;
+  text-align: center;
+}
+
+.coeurs-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  text-align: left;
+}
+
+.carte-produit {
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(62, 39, 35, 0.12);
+  transition: 0.3s;
+}
+
+.carte-produit:hover {
+  box-shadow: 0 12px 32px rgba(62, 39, 35, 0.25);
+  transform: translateY(-4px);
+}
+
+.carte-produit img {
+  width: 100%;
+  height: 260px;
+  border-radius: 0;
+}
+
+.carte-texte {
+  padding: 16px 24px 24px;
+}
+
+.prix {
+  color: var(--terracotta);
+  font-weight: bold;
+}
+
+.bandeau-horaires,
+.titre-page {
+  padding: 48px 0;
+  background: var(--sable);
+  text-align: center;
+}
+
+.bandeau-titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  background: linear-gradient(rgba(62, 39, 35, 0.45), rgba(62, 39, 35, 0.45)), url("../img/bandeau-carte.jpg") center / cover;
+  color: white;
+}
+
+.carte-menu {
+  padding: 64px 0 96px;
+}
+
+.onglet-radio {
+  display: none;
+}
+
+.onglets {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.onglets label {
+  flex: 1;
+  max-width: 240px;
+  padding: 20px 0;
+  border-radius: 8px;
+  background: var(--sable);
+  text-align: center;
+  cursor: pointer;
+}
+
+.panneau {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 60px;
+}
+
+#onglet-entrees:checked ~ .onglets label[for="onglet-entrees"],
+#onglet-plats:checked ~ .onglets label[for="onglet-plats"],
+#onglet-desserts:checked ~ .onglets label[for="onglet-desserts"],
+#onglet-boissons:checked ~ .onglets label[for="onglet-boissons"] {
+  background: var(--terracotta);
+  color: white;
+}
+
+#onglet-entrees:checked ~ .panneaux .panneau-entrees,
+#onglet-plats:checked ~ .panneaux .panneau-plats,
+#onglet-desserts:checked ~ .panneaux .panneau-desserts,
+#onglet-boissons:checked ~ .panneaux .panneau-boissons {
+  display: grid;
+}
+
+.plat {
+  display: flex;
+  gap: 24px;
+}
+
+.plat img {
+  width: 120px;
+  height: 90px;
+  flex-shrink: 0;
+}
+
+.plat h3 {
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+
+.plat p {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.galerie {
+  padding: 96px 0;
+}
+
+.galerie-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.galerie figure {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  margin: 0;
+  border-radius: 12px;
+}
+
+.galerie img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  transition: 0.4s;
+}
+
+.galerie figure:hover img {
+  transform: scale(1.05);
+}
+
+.galerie figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: rgba(62, 39, 35, 0.75);
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.galerie figure:hover figcaption {
+  opacity: 1;
+}
+
+.contact {
+  padding: 64px 0;
+}
+
+.contact-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.champ {
+  margin-bottom: 24px;
+}
+
+.champ label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.champ input,
+.champ textarea {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--sable);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.champ textarea {
+  height: 160px;
+  padding: 16px;
+}
+
+.champ input:focus,
+.champ textarea:focus {
+  outline: none;
+  border: 2px solid var(--terracotta);
+}
+
+.coordonnees {
+  padding: 40px;
+  border-radius: 12px;
+  background: var(--sable);
+}
+
+.coordonnees address {
+  font-style: normal;
+}
+
+.plan {
+  padding-bottom: 96px;
+}
+
+.plan img {
+  width: 100%;
+  height: 360px;
+}
+
+.pied {
+  padding: 40px 0 16px;
+  background: var(--cafe);
+  color: var(--creme);
+  font-size: 14px;
+}
+
+.pied-colonnes {
+  display: flex;
+  gap: 32px;
+}
+
+.pied-colonnes > div {
+  flex: 1;
+}
+
+.pied img {
+  height: 48px;
+  border-radius: 0;
+}
+
+.pied a:hover {
+  color: var(--terracotta);
+}
+
+.copyright {
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 30px; }
+
+  .entete-contenu,
+  .pied-colonnes {
+    flex-direction: column;
+    height: auto;
+    padding: 8px 0;
+  }
+
+  .menu {
+    gap: 16px;
+  }
+
+  .hero {
+    height: 420px;
+  }
+
+  .histoire-grille,
+  .coeurs-grille,
+  .galerie-grille,
+  .contact-grille,
+  .panneau {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .histoire-grille img {
+    order: -1;
+  }
+
+  .onglets {
+    flex-wrap: wrap;
+  }
+
+  .onglets label {
+    flex: 1 1 45%;
+  }
+}
